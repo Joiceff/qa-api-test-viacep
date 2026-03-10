@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Spread QA API Test - ViaCEP",
+    "_postman_id": "9b2e6f20-1234-4b0c-9c2a-qa-spread",
+    "description": "Collection para testes da API ViaCEP - Desafio Técnico",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CT01 - Fluxo Básico - CEP válido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/01001000/json/",
+          "protocol": "https",
+          "host": ["viacep", "com", "br"],
+          "path": ["ws", "01001000", "json"]
+        }
+      }
+    },
+    {
+      "name": "CT02 - Fluxo Alternativo - CEP inexistente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/00000000/json/",
+          "protocol": "https",
+          "host": ["viacep", "com", "br"],
+          "path": ["ws", "00000000", "json"]
+        }
+      }
+    },
+    {
+      "name": "CT03 - Fluxo de Exceção - CEP inválido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://viacep.com.br/ws/ABC123/json/",
+          "protocol": "https",
+          "host": ["viacep", "com", "br"],
+          "path": ["ws", "ABC123", "json"]
+        }
+      }
+    }
+  ]
+}
